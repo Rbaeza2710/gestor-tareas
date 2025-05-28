@@ -2,8 +2,8 @@
 include('db.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $titulo = $_POST['titulo'];
-    $descripcion = $_POST['descripcion'];
+    $titulo = mysqli_real_escape_string($conn, $_POST['titulo']);
+    $descripcion = mysqli_real_escape_string($conn, $_POST['descripcion']);
     $query = "INSERT INTO tareas (titulo, descripcion) VALUES ('$titulo', '$descripcion')";
     mysqli_query($conn, $query);
     header("Location: index.php");
@@ -24,13 +24,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form method="POST">
         <label for="titulo">Título:</label>
         <input type="text" name="titulo" required>
-        
+
         <label for="descripcion">Descripción:</label>
         <textarea name="descripcion" required></textarea>
-        
-        <button type="submit">Guardar</button>
+
+        <button type="submit" class="btn">Guardar</button>
     </form>
     <a href="index.php">← Volver</a>
 </div>
 </body>
 </html>
+

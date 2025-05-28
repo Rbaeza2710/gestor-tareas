@@ -1,12 +1,9 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "gestor";
+$conn = mysqli_connect("localhost", "root", "", "gestor");
 
-$conn = mysqli_connect($host, $user, $pass, $dbname);
-
+// Verificar conexión
 if (!$conn) {
-    die("Error al conectar: " . mysqli_connect_error());
+    die("Conexión fallida: " . mysqli_connect_error());
 }
 ?>
+
