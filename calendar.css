@@ -1,0 +1,94 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.calendar-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 15px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.calendar-header button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.calendar-header button:hover {
+  background-color: #0056b3;
+}
+
+#monthYear {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day {
+  border: 1px solid #ddd;
+  min-height: 80px;
+  padding: 5px;
+  background: #fafafa;
+  position: relative;
+  cursor: default;
+  border-radius: 4px;
+}
+
+.day:hover {
+  background-color: #e9ecef;
+}
+
+.empty {
+  background: transparent;
+  border: none;
+  cursor: default;
+}
+
+.tarea {
+  background-color: #007bff;
+  color: white;
+  padding: 2px 6px;
+  margin-top: 5px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tarea:hover {
+  background-color: #0056b3;
+}
