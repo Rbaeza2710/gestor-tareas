@@ -1,131 +1,93 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: #fff;
-  margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  padding: 20px;
 }
 
 .container {
-  max-width: 800px;
-  margin: 40px auto;
-  background: #1e1e2f;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 30px;
-  font-weight: 700;
-  letter-spacing: 1.2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"],
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calendar-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
 }
 
 th, td {
-  padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #44475a;
-}
-
-th {
-  background-color: #5a4bcf;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-tr:hover {
-  background-color: #393e57;
+  padding: 10px;
 }
 
 .actions a {
-  margin-right: 12px;
-  color: #f8f8f2;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.actions a:hover {
-  color: #ff6b6b;
-}
-
-.delete {
-  color: #ff6b6b;
-}
-
-form {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input[type="text"],
-textarea {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 500;
-  background: #292c41;
-  color: #f8f8f2;
-  resize: vertical;
-  transition: background-color 0.3s ease;
-}
-
-input[type="text"]:focus,
-textarea:focus {
-  background: #3c3f5e;
-  outline: none;
-}
-
-button, .btn {
-  background-color: #6a11cb;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-weight: 700;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-  text-align: center;
-  display: inline-block;
+  margin-right: 10px;
   text-decoration: none;
 }
 
-button:hover, .btn:hover {
-  background-color: #2575fc;
+.actions .delete {
+  color: red;
 }
 
-a {
-  color: #a3a3ff;
-  text-decoration: none;
-  font-weight: 600;
+.actions .cambiar-estado {
+  color: blue;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-.calendar-button {
-  display: inline-block;
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  background-color: #2196f3;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
+.pendiente {
+  color: orange;
   font-weight: bold;
-  transition: background-color 0.3s ease;
 }
 
-.calendar-button:hover {
-  background-color: #1976d2;
+.completada {
+  color: green;
+  font-weight: bold;
+  text-decoration: line-through;
 }
+

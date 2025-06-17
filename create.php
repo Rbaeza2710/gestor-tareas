@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $descripcion = $_POST['descripcion'];
     $fecha = $_POST['fecha'];
 
-    $query = "INSERT INTO tareas (titulo, descripcion, fecha) VALUES ('$titulo', '$descripcion', '$fecha')";
+$query = "INSERT INTO tareas (titulo, descripcion, fecha, estado) VALUES ('$titulo', '$descripcion', '$fecha', 0)";
     mysqli_query($conn, $query);
     header("Location: index.php");
     exit();
